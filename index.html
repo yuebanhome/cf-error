@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Cloudflare Error Pages</title>
+  <link rel="stylesheet" href="/assets/error.css">
+</head>
+<body>
+  <main class="page">
+    <section class="error-shell server" aria-labelledby="title">
+      <div class="hero">
+        <div class="topline">
+          <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Cloudflare custom pages</span></div>
+          <span class="code">static asset set</span>
+        </div>
+        <div class="copy">
+          <p class="eyeline">Reusable error surface</p>
+          <h1 id="title">Error pages ready for Cloudflare.</h1>
+          <p class="summary">Deploy this project on Cloudflare Pages, then point each Cloudflare custom error page or custom error rule to the matching HTML URL.</p>
+          <div class="actions" aria-label="Available pages">
+            <a class="button primary" href="/403-ip.html">403 IP</a>
+            <a class="button" href="/403-under.html">Challenge</a>
+            <a class="button" href="/500.html">5XX</a>
+            <a class="button" href="/1000.html">1XXX</a>
+          </div>
+        </div>
+        <div class="status-strip" aria-label="Project properties">
+          <div class="status-item"><p class="status-label">Runtime</p><p class="status-value">Static HTML</p></div>
+          <div class="status-item"><p class="status-label">Assets</p><p class="status-value">Local only</p></div>
+          <div class="status-item"><p class="status-label">Access</p><p class="status-value">Public URLs</p></div>
+        </div>
+      </div>
+      <aside class="panel" aria-label="Page map">
+        <div class="panel-heading"><h2>Entry points</h2><span class="status-dot" aria-hidden="true"></span></div>
+        <div class="guidance">
+          <div class="row"><span class="key">403-ip</span><p class="value">/403-ip.html</p></div>
+          <div class="row"><span class="key">403-block</span><p class="value">/403-block.html</p></div>
+          <div class="row"><span class="key">403-under</span><p class="value">/403-under.html</p></div>
+          <div class="row"><span class="key">403-noninteractive</span><p class="value">/403-non-interactive.html</p></div>
+          <div class="row"><span class="key">404</span><p class="value">/404.html</p></div>
+          <div class="row"><span class="key">429</span><p class="value">/429.html</p></div>
+          <div class="row"><span class="key">500</span><p class="value">/500.html</p></div>
+          <div class="row"><span class="key">1000</span><p class="value">/1000.html</p></div>
+        </div>
+        <p class="footer">Keep these pages publicly reachable. Cloudflare must be able to fetch each URL and its local assets with HTTP 200.</p>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

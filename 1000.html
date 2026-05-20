@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>1000 - Configuration error</title>
+  <link rel="stylesheet" href="/assets/error.css">
+</head>
+<body>
+  <main class="page">
+    <section class="error-shell server" aria-labelledby="title">
+      <div class="hero">
+        <div class="topline">
+          <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Configuration</span></div>
+          <span class="code">1XXX</span>
+        </div>
+
+        <div class="copy">
+          <p class="eyeline">Cloudflare configuration issue</p>
+          <h1 id="title">The request could not be routed safely.</h1>
+          <p class="summary">Cloudflare detected a configuration or routing problem before the site could answer. The diagnostic box gives the exact error and Ray ID.</p>
+          <div class="actions">
+            <a class="button primary" href=".">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Retry
+            </a>
+          </div>
+        </div>
+
+        <div class="status-strip" aria-label="Error summary">
+          <div class="status-item"><p class="status-label">Status</p><p class="status-value">Cloudflare 1XXX</p></div>
+          <div class="status-item"><p class="status-label">Ray ID</p><p class="status-value">::RAY_ID::</p></div>
+          <div class="status-item"><p class="status-label">Owner action</p><p class="status-value">Check DNS and proxy config</p></div>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Cloudflare details">
+        <div class="panel-heading"><h2>Error details</h2><span class="status-dot" aria-hidden="true"></span></div>
+        <div class="cf-box">
+          ::CLOUDFLARE_ERROR_1000S_BOX::
+        </div>
+        <div class="diagnostics">
+          <div class="row"><span class="key">Ray ID</span><p class="value">::RAY_ID::</p></div>
+          <div class="row"><span class="key">Client IP</span><p class="value">::CLIENT_IP::</p></div>
+        </div>
+        <p class="footer">This page is intended for Cloudflare 1XXX error page configuration.</p>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>403 - Access blocked</title>
+  <link rel="stylesheet" href="/assets/error.css">
+</head>
+<body>
+  <main class="page">
+    <section class="error-shell blocked" aria-labelledby="title">
+      <div class="hero">
+        <div class="topline">
+          <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Access control</span></div>
+          <span class="code">403</span>
+        </div>
+
+        <div class="copy">
+          <p class="eyeline">Request blocked by policy</p>
+          <h1 id="title">This location cannot access the site.</h1>
+          <p class="summary">Your request matched an IP address, country, or network policy. If you believe this block is incorrect, include the diagnostic details when contacting support.</p>
+          <div class="actions">
+            <a class="button primary" href="/">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8V21h-6v-6H9v6H3V10.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              Go home
+            </a>
+            <a class="button" href=".">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Retry
+            </a>
+          </div>
+        </div>
+
+        <div class="status-strip" aria-label="Error summary">
+          <div class="status-item"><p class="status-label">Status</p><p class="status-value">Forbidden</p></div>
+          <div class="status-item"><p class="status-label">Client IP</p><p class="status-value">::CLIENT_IP::</p></div>
+          <div class="status-item"><p class="status-label">Region</p><p class="status-value">::GEO::</p></div>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Diagnostics">
+        <div class="panel-heading"><h2>Request details</h2><span class="status-dot" aria-hidden="true"></span></div>
+        <div class="diagnostics">
+          <div class="row"><span class="key">Error</span><p class="value">403</p></div>
+          <div class="row"><span class="key">Ray ID</span><p class="value">::RAY_ID::</p></div>
+          <div class="row"><span class="key">Client IP</span><p class="value">::CLIENT_IP::</p></div>
+          <div class="row"><span class="key">Country</span><p class="value">::GEO::</p></div>
+          <div class="row"><span class="key">Action</span><p class="value">IP or country block</p></div>
+        </div>
+        <p class="note">Network policy blocks can be temporary or permanent. The Ray ID lets the site owner find the exact Cloudflare event.</p>
+        <p class="footer">Served by Cloudflare custom error pages.</p>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

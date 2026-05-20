@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>500 - Service unavailable</title>
+  <link rel="stylesheet" href="/assets/error.css">
+</head>
+<body>
+  <main class="page">
+    <section class="error-shell server" aria-labelledby="title">
+      <div class="hero">
+        <div class="topline">
+          <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Service status</span></div>
+          <span class="code">5XX</span>
+        </div>
+
+        <div class="copy">
+          <p class="eyeline">Temporary service problem</p>
+          <h1 id="title">The site is not responding correctly.</h1>
+          <p class="summary">Cloudflare reached this request, but the site or a network path returned an error. The technical details below identify the failing request.</p>
+          <div class="actions">
+            <a class="button primary" href=".">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Retry
+            </a>
+            <a class="button" href="/">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8V21h-6v-6H9v6H3V10.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              Go home
+            </a>
+          </div>
+        </div>
+
+        <div class="status-strip" aria-label="Error summary">
+          <div class="status-item"><p class="status-label">Status</p><p class="status-value">Cloudflare 5XX</p></div>
+          <div class="status-item"><p class="status-label">Ray ID</p><p class="status-value">::RAY_ID::</p></div>
+          <div class="status-item"><p class="status-label">Next step</p><p class="status-value">Retry later</p></div>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Cloudflare details">
+        <div class="panel-heading"><h2>Error details</h2><span class="status-dot" aria-hidden="true"></span></div>
+        <div class="cf-box">
+          ::CLOUDFLARE_ERROR_500S_BOX::
+        </div>
+        <div class="diagnostics">
+          <div class="row"><span class="key">Ray ID</span><p class="value">::RAY_ID::</p></div>
+          <div class="row"><span class="key">Client IP</span><p class="value">::CLIENT_IP::</p></div>
+        </div>
+        <p class="footer">For origin-generated 500 responses, use Cloudflare Custom Error Rules when the plan supports it.</p>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

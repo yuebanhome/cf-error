@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>429 - Too many requests</title>
+  <link rel="stylesheet" href="/assets/error.css">
+</head>
+<body>
+  <main class="page">
+    <section class="error-shell limited" aria-labelledby="title">
+      <div class="hero">
+        <div class="topline">
+          <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Rate limit</span></div>
+          <span class="code">429</span>
+        </div>
+
+        <div class="copy">
+          <p class="eyeline">Traffic slowed down</p>
+          <h1 id="title">Too many requests arrived too quickly.</h1>
+          <p class="summary">This request has been rate limited to protect the site. Wait a short time, then retry from the same page.</p>
+          <div class="actions">
+            <a class="button primary" href=".">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Retry
+            </a>
+          </div>
+        </div>
+
+        <div class="status-strip" aria-label="Error summary">
+          <div class="status-item"><p class="status-label">Status</p><p class="status-value">Rate limited</p></div>
+          <div class="status-item"><p class="status-label">Ray ID</p><p class="status-value">::RAY_ID::</p></div>
+          <div class="status-item"><p class="status-label">Action</p><p class="status-value">Wait and retry</p></div>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Diagnostics">
+        <div class="panel-heading"><h2>Request details</h2><span class="status-dot" aria-hidden="true"></span></div>
+        <div class="diagnostics">
+          <div class="row"><span class="key">Error</span><p class="value">429</p></div>
+          <div class="row"><span class="key">Ray ID</span><p class="value">::RAY_ID::</p></div>
+          <div class="row"><span class="key">Client IP</span><p class="value">::CLIENT_IP::</p></div>
+          <div class="row"><span class="key">Action</span><p class="value">Rate limit triggered</p></div>
+        </div>
+        <p class="note">Automated retries can extend the limit window. If you are using an integration, reduce its request concurrency.</p>
+        <p class="footer">Served by Cloudflare custom error pages.</p>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>
