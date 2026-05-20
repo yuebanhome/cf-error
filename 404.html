@@ -4,51 +4,70 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>404 - Page not found</title>
+  <title>404 &middot; Not found</title>
   <link rel="stylesheet" href="/assets/error.css">
 </head>
-<body>
+<body class="state-void">
   <main class="page">
-    <section class="error-shell" aria-labelledby="title">
-      <div class="hero">
-        <div class="topline">
-          <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Page not found</span></div>
-          <span class="code">404</span>
-        </div>
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="0.5"/><rect x="9" y="2" width="5" height="5" rx="0.5" opacity="0.4"/><rect x="2" y="9" width="5" height="5" rx="0.5" opacity="0.4"/><rect x="9" y="9" width="5" height="5" rx="0.5" opacity="0.7"/></svg>
+        <span class="brand-name">cloudflare</span>
+        <span class="sep">//</span>
+        <span class="state-label">void</span>
+      </div>
+      <div class="meta">
+        <span class="meta-row"><span class="meta-key">code</span><span class="meta-value">404</span></span>
+        <span class="meta-row"><span class="meta-key">tier</span><span class="meta-value">pages</span></span>
+        <span class="status-led" aria-hidden="true"></span>
+      </div>
+    </header>
 
-        <div class="copy">
-          <p class="eyeline">Nothing is here</p>
-          <h1 id="title">The page cannot be found.</h1>
-          <p class="summary">The address may be outdated, moved, or typed incorrectly. Return to the homepage or retry the request.</p>
-          <div class="actions">
-            <a class="button primary" href="/">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8V21h-6v-6H9v6H3V10.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              Go home
-            </a>
-            <a class="button" href=".">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Retry
-            </a>
-          </div>
-        </div>
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow reveal r1">route not found</p>
 
-        <div class="status-strip" aria-label="Error summary">
-          <div class="status-item"><p class="status-label">Status</p><p class="status-value">Not found</p></div>
-          <div class="status-item"><p class="status-label">Scope</p><p class="status-value">Requested URL</p></div>
-          <div class="status-item"><p class="status-label">Next step</p><p class="status-value">Check the address</p></div>
-        </div>
+      <div class="code-block reveal r2">
+        <span class="code-num" aria-hidden="true">404</span>
+        <span class="code-meta">
+          <span class="code-meta-row"><span class="code-meta-key">status</span> not found</span>
+          <span class="code-meta-row"><span class="code-meta-key">scope</span> requested url</span>
+          <span class="code-meta-row"><span class="code-meta-key">action</span> check the address</span>
+        </span>
       </div>
 
-      <aside class="panel" aria-label="Guidance">
-        <div class="panel-heading"><h2>What to try</h2><span class="status-dot" aria-hidden="true"></span></div>
-        <div class="guidance">
-          <div class="row"><span class="key">Step 1</span><p class="value">Confirm that the URL is correct.</p></div>
-          <div class="row"><span class="key">Step 2</span><p class="value">Return to the homepage and navigate from there.</p></div>
-          <div class="row"><span class="key">Step 3</span><p class="value">Retry after a refresh if this link was just published.</p></div>
-        </div>
-        <p class="footer">Cloudflare Pages also serves this file automatically for missing project routes.</p>
-      </aside>
+      <h1 id="title" class="headline reveal r3">Nothing lives at this address.</h1>
+
+      <p class="body reveal r4">The URL may be outdated, moved, or typed slightly wrong. Step back to the homepage or retry once the link has been corrected.</p>
+
+      <div class="actions reveal r5">
+        <a class="action action--primary" href="/">
+          go home
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="action" href=".">
+          retry
+          <span class="arrow" aria-hidden="true">&#8635;</span>
+        </a>
+      </div>
     </section>
+
+    <section class="panel reveal r6" aria-label="What to try">
+      <div class="panel-heading">
+        <h2>What to try</h2>
+        <p>Three quick recoveries when a link gives up.</p>
+      </div>
+      <div class="diag">
+        <div class="diag-row"><span class="diag-key">Step 01</span><span class="diag-leader" aria-hidden="true"></span><span class="diag-value">Confirm that the URL is correct</span></div>
+        <div class="diag-row"><span class="diag-key">Step 02</span><span class="diag-leader" aria-hidden="true"></span><span class="diag-value">Return to the homepage</span></div>
+        <div class="diag-row"><span class="diag-key">Step 03</span><span class="diag-leader" aria-hidden="true"></span><span class="diag-value">Refresh if the link was just published</span></div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span class="foot-tag">[ system ]</span>
+      <p class="foot-text">cloudflare custom error pages &middot; pages fallback</p>
+      <span class="foot-meta">cf &middot; static</span>
+    </footer>
   </main>
 </body>
 </html>

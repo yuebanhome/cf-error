@@ -4,53 +4,71 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>403 - Request blocked</title>
+  <title>403 &middot; Request blocked</title>
   <link rel="stylesheet" href="/assets/error.css">
 </head>
-<body>
+<body class="state-blocked">
   <main class="page">
-    <section class="error-shell blocked" aria-labelledby="title">
-      <div class="hero">
-        <div class="topline">
-          <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Request blocked</span></div>
-          <span class="code">403</span>
-        </div>
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="0.5"/><rect x="9" y="2" width="5" height="5" rx="0.5" opacity="0.4"/><rect x="2" y="9" width="5" height="5" rx="0.5" opacity="0.4"/><rect x="9" y="9" width="5" height="5" rx="0.5" opacity="0.7"/></svg>
+        <span class="brand-name">cloudflare</span>
+        <span class="sep">//</span>
+        <span class="state-label">blocked</span>
+      </div>
+      <div class="meta">
+        <span class="meta-row"><span class="meta-key">code</span><span class="meta-value">403</span></span>
+        <span class="meta-row"><span class="meta-key">tier</span><span class="meta-value">waf</span></span>
+        <span class="status-led" aria-hidden="true"></span>
+      </div>
+    </header>
 
-        <div class="copy">
-          <p class="eyeline">Security rule matched</p>
-          <h1 id="title">The request was blocked before it reached the site.</h1>
-          <p class="summary">A Cloudflare security rule stopped this request. The site owner can review the event by using the Ray ID below.</p>
-          <div class="actions">
-            <a class="button primary" href="/">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10.8 12 3l9 7.8V21h-6v-6H9v6H3V10.8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              Go home
-            </a>
-            <a class="button" href=".">
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v6h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Retry
-            </a>
-          </div>
-        </div>
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow reveal r1">security rule matched</p>
 
-        <div class="status-strip" aria-label="Error summary">
-          <div class="status-item"><p class="status-label">Status</p><p class="status-value">Forbidden</p></div>
-          <div class="status-item"><p class="status-label">Ray ID</p><p class="status-value">::RAY_ID::</p></div>
-          <div class="status-item"><p class="status-label">Action</p><p class="status-value">Security block</p></div>
-        </div>
+      <div class="code-block reveal r2">
+        <span class="code-num" aria-hidden="true">403</span>
+        <span class="code-meta">
+          <span class="code-meta-row"><span class="code-meta-key">status</span> forbidden</span>
+          <span class="code-meta-row"><span class="code-meta-key">scope</span> waf rule</span>
+          <span class="code-meta-row"><span class="code-meta-key">action</span> security block</span>
+        </span>
       </div>
 
-      <aside class="panel" aria-label="Diagnostics">
-        <div class="panel-heading"><h2>Request details</h2><span class="status-dot" aria-hidden="true"></span></div>
-        <div class="diagnostics">
-          <div class="row"><span class="key">Error</span><p class="value">403</p></div>
-          <div class="row"><span class="key">Ray ID</span><p class="value">::RAY_ID::</p></div>
-          <div class="row"><span class="key">Client IP</span><p class="value">::CLIENT_IP::</p></div>
-          <div class="row"><span class="key">Country</span><p class="value">::GEO::</p></div>
-        </div>
-        <p class="note">If this was a normal browser request, try again later or contact the site owner with the Ray ID.</p>
-        <p class="footer">Use this page for WAF block and similar 403 custom pages.</p>
-      </aside>
+      <h1 id="title" class="headline reveal r3">This request was stopped before it reached the site.</h1>
+
+      <p class="body reveal r4">A Cloudflare security rule rejected the request. The site owner can replay the event using the Ray ID below.</p>
+
+      <div class="actions reveal r5">
+        <a class="action action--primary" href="/">
+          go home
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="action" href=".">
+          retry
+          <span class="arrow" aria-hidden="true">&#8635;</span>
+        </a>
+      </div>
     </section>
+
+    <section class="panel reveal r6" aria-label="Request diagnostics">
+      <div class="panel-heading">
+        <h2>Diagnostics</h2>
+        <p>Cloudflare event reference for this request.</p>
+      </div>
+      <div class="diag">
+        <div class="diag-row"><span class="diag-key">Ray ID</span><span class="diag-leader" aria-hidden="true"></span><span class="diag-value">::RAY_ID::</span></div>
+        <div class="diag-row"><span class="diag-key">Client IP</span><span class="diag-leader" aria-hidden="true"></span><span class="diag-value">::CLIENT_IP::</span></div>
+        <div class="diag-row"><span class="diag-key">Region</span><span class="diag-leader" aria-hidden="true"></span><span class="diag-value">::GEO::</span></div>
+        <div class="diag-row"><span class="diag-key">Reason</span><span class="diag-leader" aria-hidden="true"></span><span class="diag-value">Security block</span></div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span class="foot-tag">[ system ]</span>
+      <p class="foot-text">cloudflare custom error pages &middot; waf surface</p>
+      <span class="foot-meta">cf &middot; static</span>
+    </footer>
   </main>
 </body>
 </html>

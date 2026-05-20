@@ -4,49 +4,107 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>Cloudflare Error Pages</title>
+  <title>Cloudflare error pages</title>
   <link rel="stylesheet" href="/assets/error.css">
 </head>
 <body>
   <main class="page">
-    <section class="error-shell server" aria-labelledby="title">
-      <div class="hero">
-        <div class="topline">
-          <div class="brand"><span class="brand-mark" aria-hidden="true"></span><span>Cloudflare custom pages</span></div>
-          <span class="code">static asset set</span>
-        </div>
-        <div class="copy">
-          <p class="eyeline">Reusable error surface</p>
-          <h1 id="title">Error pages ready for Cloudflare.</h1>
-          <p class="summary">Deploy this project on Cloudflare Pages, then point each Cloudflare custom error page or custom error rule to the matching HTML URL.</p>
-          <div class="actions" aria-label="Available pages">
-            <a class="button primary" href="/403-ip.html">403 IP</a>
-            <a class="button" href="/403-under.html">Challenge</a>
-            <a class="button" href="/500.html">5XX</a>
-            <a class="button" href="/1000.html">1XXX</a>
-          </div>
-        </div>
-        <div class="status-strip" aria-label="Project properties">
-          <div class="status-item"><p class="status-label">Runtime</p><p class="status-value">Static HTML</p></div>
-          <div class="status-item"><p class="status-label">Assets</p><p class="status-value">Local only</p></div>
-          <div class="status-item"><p class="status-label">Access</p><p class="status-value">Public URLs</p></div>
-        </div>
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="0.5"/><rect x="9" y="2" width="5" height="5" rx="0.5" opacity="0.4"/><rect x="2" y="9" width="5" height="5" rx="0.5" opacity="0.4"/><rect x="9" y="9" width="5" height="5" rx="0.5" opacity="0.7"/></svg>
+        <span class="brand-name">cloudflare</span>
+        <span class="sep">//</span>
+        <span class="state-label">index</span>
       </div>
-      <aside class="panel" aria-label="Page map">
-        <div class="panel-heading"><h2>Entry points</h2><span class="status-dot" aria-hidden="true"></span></div>
-        <div class="guidance">
-          <div class="row"><span class="key">403-ip</span><p class="value">/403-ip.html</p></div>
-          <div class="row"><span class="key">403-block</span><p class="value">/403-block.html</p></div>
-          <div class="row"><span class="key">403-under</span><p class="value">/403-under.html</p></div>
-          <div class="row"><span class="key">403-noninteractive</span><p class="value">/403-non-interactive.html</p></div>
-          <div class="row"><span class="key">404</span><p class="value">/404.html</p></div>
-          <div class="row"><span class="key">429</span><p class="value">/429.html</p></div>
-          <div class="row"><span class="key">500</span><p class="value">/500.html</p></div>
-          <div class="row"><span class="key">1000</span><p class="value">/1000.html</p></div>
-        </div>
-        <p class="footer">Keep these pages publicly reachable. Cloudflare must be able to fetch each URL and its local assets with HTTP 200.</p>
-      </aside>
+      <div class="meta">
+        <span class="meta-row"><span class="meta-key">build</span><span class="meta-value">static</span></span>
+        <span class="meta-row"><span class="meta-key">pages</span><span class="meta-value">08</span></span>
+        <span class="status-led" aria-hidden="true"></span>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow reveal r1">reusable error surface</p>
+      <h1 id="title" class="headline-lg reveal r2">Error pages, ready for Cloudflare.</h1>
+      <p class="body reveal r3">Deploy this project on Cloudflare Pages, then point each custom error page or custom error rule to the matching HTML URL. Every asset stays local &mdash; no CDN, no remote font, no remote image.</p>
+      <div class="actions reveal r4">
+        <a class="action action--primary" href="/404.html">
+          preview 404
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="action" href="/500.html">
+          preview 5XX
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="action" href="/403-under.html">
+          preview challenge
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
     </section>
+
+    <section class="catalog reveal r5" aria-label="Page catalog">
+      <div class="catalog-heading">
+        <h2>Catalog</h2>
+        <p>Eight static surfaces. Pick the one that matches your Cloudflare error rule and copy its URL into the dashboard.</p>
+      </div>
+      <div class="catalog-grid">
+        <a class="card state-blocked" href="/403-ip.html">
+          <span class="card-eyebrow">access policy</span>
+          <span class="card-code">403</span>
+          <span class="card-label">ip &middot; country</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="card state-blocked" href="/403-block.html">
+          <span class="card-eyebrow">security block</span>
+          <span class="card-code">403</span>
+          <span class="card-label">waf &middot; rule</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="card state-challenge" href="/403-under.html">
+          <span class="card-eyebrow">verification</span>
+          <span class="card-code">403</span>
+          <span class="card-label">interactive challenge</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="card state-scan" href="/403-non-interactive.html">
+          <span class="card-eyebrow">automated check</span>
+          <span class="card-code">403</span>
+          <span class="card-label">under attack mode</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="card state-void" href="/404.html">
+          <span class="card-eyebrow">not found</span>
+          <span class="card-code">404</span>
+          <span class="card-label">missing route</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="card state-limited" href="/429.html">
+          <span class="card-eyebrow">rate limit</span>
+          <span class="card-code">429</span>
+          <span class="card-label">too many requests</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="card state-server" href="/500.html">
+          <span class="card-eyebrow">service fault</span>
+          <span class="card-code">5XX</span>
+          <span class="card-label">origin / network</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="card state-routing" href="/1000.html">
+          <span class="card-eyebrow">routing fault</span>
+          <span class="card-code">1XXX</span>
+          <span class="card-label">dns &middot; proxy</span>
+          <span class="card-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span class="foot-tag">[ system ]</span>
+      <p class="foot-text">cloudflare custom error pages &middot; static surface</p>
+      <span class="foot-meta">cf &middot; pages</span>
+    </footer>
   </main>
 </body>
 </html>
