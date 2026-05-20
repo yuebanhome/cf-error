@@ -9,7 +9,6 @@ const htmlFiles = readdirSync(root)
 
 const requiredPages = [
   "1000.html",
-  "403-Under.html",
   "403-block.html",
   "403-ip.html",
   "403-non-interactive.html",
@@ -22,7 +21,6 @@ const requiredPages = [
 
 const requiredTokens = {
   "1000.html": ["::CLOUDFLARE_ERROR_1000S_BOX::"],
-  "403-Under.html": ["::CAPTCHA_BOX::"],
   "403-ip.html": ["::CLIENT_IP::", "::GEO::", "::RAY_ID::"],
   "403-non-interactive.html": ["::IM_UNDER_ATTACK_BOX::"],
   "403-under.html": ["::CAPTCHA_BOX::"],

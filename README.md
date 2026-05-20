@@ -8,8 +8,7 @@ Static error pages designed to be deployed on Cloudflare Pages and referenced fr
 | --- | --- |
 | `403-ip.html` | IP address or country block page |
 | `403-block.html` | Generic WAF or security block page |
-| `403-Under.html` | Interactive challenge page with `::CAPTCHA_BOX::` |
-| `403-under.html` | Lowercase alias for `403-Under.html` |
+| `403-under.html` | Interactive challenge page with `::CAPTCHA_BOX::` |
 | `403-non-interactive.html` | Non-interactive challenge page with `::IM_UNDER_ATTACK_BOX::` |
 | `404.html` | Cloudflare Pages project 404 and optional custom 404 asset |
 | `429.html` | Rate limit block page |
@@ -25,7 +24,7 @@ After deployment, use the final public URLs in Cloudflare:
 ```text
 https://<project>.pages.dev/403-ip.html
 https://<project>.pages.dev/403-block.html
-https://<project>.pages.dev/403-Under.html
+https://<project>.pages.dev/403-under.html
 https://<project>.pages.dev/403-non-interactive.html
 https://<project>.pages.dev/404.html
 https://<project>.pages.dev/429.html
@@ -41,4 +40,3 @@ Cloudflare fetches the HTML and local assets when you save the custom page. Make
 - The CSS avoids fixed viewport clipping so Cloudflare-injected boxes can expand naturally.
 - All assets are local to the Pages project. No CDN, remote font, or remote image dependency is required.
 - Source-origin 500 responses may require Custom Error Rules depending on the Cloudflare plan. Product-triggered Cloudflare 5XX and 1XXX errors use the dedicated token pages.
-- The lowercase `403-under.html` page duplicates `403-Under.html` on purpose. Cloudflare Pages paths are case-sensitive, and custom page fetches should not depend on redirects.
